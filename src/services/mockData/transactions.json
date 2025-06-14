@@ -1,0 +1,92 @@
+[
+  {
+    "id": "1",
+    "accountId": "1",
+    "amount": -85.42,
+    "date": "2024-01-14",
+    "category": "Groceries",
+    "merchant": "Whole Foods Market",
+    "type": "expense"
+  },
+  {
+    "id": "2",
+    "accountId": "1",
+    "amount": -45.00,
+    "date": "2024-01-14",
+    "category": "Gas",
+    "merchant": "Shell Station",
+    "type": "expense"
+  },
+  {
+    "id": "3",
+    "accountId": "1",
+    "amount": 3200.00,
+    "date": "2024-01-13",
+    "category": "Salary",
+    "merchant": "Tech Corp Inc",
+    "type": "income"
+  },
+  {
+    "id": "4",
+    "accountId": "3",
+    "amount": -120.50,
+    "date": "2024-01-12",
+    "category": "Dining",
+    "merchant": "Local Bistro",
+    "type": "expense"
+  },
+  {
+    "id": "5",
+    "accountId": "1",
+    "amount": -1250.00,
+    "date": "2024-01-12",
+    "category": "Rent",
+    "merchant": "Property Management",
+    "type": "expense"
+  },
+  {
+    "id": "6",
+    "accountId": "2",
+    "amount": 500.00,
+    "date": "2024-01-11",
+    "category": "Transfer",
+    "merchant": "Savings Transfer",
+    "type": "income"
+  },
+  {
+    "id": "7",
+    "accountId": "1",
+    "amount": -65.30,
+    "date": "2024-01-11",
+    "category": "Utilities",
+    "merchant": "Electric Company",
+    "type": "expense"
+  },
+  {
+    "id": "8",
+    "accountId": "1",
+    "amount": -28.99,
+    "date": "2024-01-10",
+    "category": "Entertainment",
+    "merchant": "Netflix",
+    "type": "expense"
+  },
+  {
+    "id": "9",
+    "accountId": "1",
+    "amount": -155.80,
+    "date": "2024-01-10",
+    "category": "Shopping",
+    "merchant": "Amazon",
+    "type": "expense"
+  },
+  {
+    "id": "10",
+    "accountId": "3",
+    "amount": -89.25,
+    "date": "2024-01-09",
+    "category": "Health",
+    "merchant": "CVS Pharmacy",
+    "type": "expense"
+  }
+]

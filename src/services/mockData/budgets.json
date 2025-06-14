@@ -1,0 +1,38 @@
+[
+  {
+    "category": "Groceries",
+    "limit": 400.00,
+    "spent": 285.42,
+    "period": "monthly"
+  },
+  {
+    "category": "Dining",
+    "limit": 250.00,
+    "spent": 180.50,
+    "period": "monthly"
+  },
+  {
+    "category": "Gas",
+    "limit": 150.00,
+    "spent": 95.00,
+    "period": "monthly"
+  },
+  {
+    "category": "Entertainment",
+    "limit": 100.00,
+    "spent": 68.99,
+    "period": "monthly"
+  },
+  {
+    "category": "Shopping",
+    "limit": 300.00,
+    "spent": 225.80,
+    "period": "monthly"
+  },
+  {
+    "category": "Health",
+    "limit": 200.00,
+    "spent": 125.25,
+    "period": "monthly"
+  }
+]

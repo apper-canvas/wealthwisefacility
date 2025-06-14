@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "type": "budget",
+    "message": "You've spent 71% of your Groceries budget this month",
+    "priority": "medium",
+    "timestamp": "2024-01-15T08:30:00Z",
+    "read": false
+  },
+  {
+    "id": "2",
+    "type": "goal",
+    "message": "Great progress! You're 58% of the way to your Emergency Fund goal",
+    "priority": "low",
+    "timestamp": "2024-01-14T15:45:00Z",
+    "read": false
+  },
+  {
+    "id": "3",
+    "type": "insight",
+    "message": "You spent 15% less on dining out this month compared to last month",
+    "priority": "low",
+    "timestamp": "2024-01-14T12:20:00Z",
+    "read": true
+  },
+  {
+    "id": "4",
+    "type": "budget",
+    "message": "Warning: Shopping budget is 75% used with 2 weeks left in the month",
+    "priority": "high",
+    "timestamp": "2024-01-13T09:15:00Z",
+    "read": false
+  },
+  {
+    "id": "5",
+    "type": "market",
+    "message": "Your portfolio gained 2.3% this week. Consider rebalancing your allocation",
+    "priority": "medium",
+    "timestamp": "2024-01-12T17:30:00Z",
+    "read": true
+  }
+]

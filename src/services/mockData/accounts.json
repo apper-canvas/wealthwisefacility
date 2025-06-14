@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1",
+    "name": "Chase Freedom Checking",
+    "type": "checking",
+    "balance": 3420.85,
+    "lastSync": "2024-01-15T10:30:00Z"
+  },
+  {
+    "id": "2", 
+    "name": "Wells Fargo Savings",
+    "type": "savings",
+    "balance": 12750.40,
+    "lastSync": "2024-01-15T10:30:00Z"
+  },
+  {
+    "id": "3",
+    "name": "Discover Credit Card",
+    "type": "credit",
+    "balance": 1850.25,
+    "lastSync": "1/15/2024 10:30:00 AMZ"
+  },
+  {
+    "id": "4",
+    "name": "Vanguard 401(k)",
+    "type": "investment",
+    "balance": 47850.75,
+    "lastSync": "1/15/2024 10:30:00 AMZ"
+  },
+  {
+    "id": "5",
+    "name": "Fidelity Roth IRA",
+    "type": "investment", 
+    "balance": 23100.50,
+    "lastSync": "2024-01-15T10:30:00Z"
+  }
+]

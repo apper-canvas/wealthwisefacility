@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "name": "Emergency Fund",
+    "targetAmount": 15000.00,
+    "currentAmount": 8750.00,
+    "targetDate": "2024-12-31",
+    "type": "savings"
+  },
+  {
+    "id": "2",
+    "name": "Vacation to Japan",
+    "targetAmount": 5000.00,
+    "currentAmount": 2150.00,
+    "targetDate": "2024-08-15",
+    "type": "savings"
+  },
+  {
+    "id": "3",
+    "name": "Pay Off Credit Card",
+    "targetAmount": 1850.25,
+    "currentAmount": 650.00,
+    "targetDate": "2024-06-30",
+    "type": "debt"
+  },
+  {
+    "id": "4",
+    "name": "New Car Down Payment",
+    "targetAmount": 8000.00,
+    "currentAmount": 3200.00,
+    "targetDate": "2024-10-01",
+    "type": "savings"
+  },
+  {
+    "id": "5",
+    "name": "Max Out 401(k)",
+    "targetAmount": 23000.00,
+    "currentAmount": 12500.00,
+    "targetDate": "2024-12-31",
+    "type": "investment"
+  }
+]
