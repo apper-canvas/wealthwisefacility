@@ -91,23 +91,30 @@ const GoalProgress = () => {
     )
   }
 
-  return (
-    <div className="space-y-6">
+return (
+    <div className="space-y-5">
       <div className="flex items-center justify-between">
-        <h2 className="text-lg font-semibold text-gray-900">Goal Progress</h2>
-        <Button variant="outline" size="sm">
-          <ApperIcon name="ArrowRight" size={16} className="ml-2" />
+        <div>
+          <h2 className="text-xl font-bold text-gray-900 mb-1">Goal Progress</h2>
+          <p className="text-sm text-gray-600">Track your financial milestones</p>
+        </div>
+        <Button variant="outline" size="sm" className="flex items-center gap-2">
           View All
+          <ApperIcon name="ArrowRight" size={16} />
         </Button>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-1 gap-4">
         {goals.map((goal, index) => (
           <motion.div
             key={goal.id}
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: index * 0.1 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ 
+              delay: index * 0.1,
+              duration: 0.4,
+              ease: "easeOut"
+            }}
           >
             <ProgressCard
               title={goal.name}

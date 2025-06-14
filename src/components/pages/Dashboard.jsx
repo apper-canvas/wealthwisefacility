@@ -29,7 +29,7 @@ animate={{ opacity: 1, y: 0 }}
           <BudgetOverview />
         </div>
 {/* Right Column - Goals & Alerts */}
-        <div className="space-y-6 lg:space-y-8">
+        <div className="space-y-8">
           <GoalProgress />
           <AlertCenter />
         </div>

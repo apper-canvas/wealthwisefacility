@@ -18,9 +18,10 @@ const Card = ({
     lg: "p-8"
   }
   
-  return (
+return (
     <motion.div
-      whileHover={hover ? { y: -2 } : {}}
+      whileHover={hover ? { y: -3, scale: 1.02 } : {}}
+      transition={{ duration: 0.2, ease: "easeOut" }}
       className={`
         ${baseClasses}
         ${hoverClasses}
