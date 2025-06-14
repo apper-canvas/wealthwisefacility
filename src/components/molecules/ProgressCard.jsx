@@ -25,9 +25,12 @@ const ProgressCard = ({
         </div>
       </Card>
     )
-  }
+}
 
-  const percentage = Math.min((current / target) * 100, 100)
+  // Ensure numeric props are valid
+  const safeCurrent = current || 0
+  const safeTarget = target || 1
+  const percentage = Math.min((safeCurrent / safeTarget) * 100, 100)
   
   const colorClasses = {
     primary: 'bg-primary text-primary',
@@ -39,10 +42,10 @@ const ProgressCard = ({
   return (
     <Card hover>
       <div className="flex items-start justify-between mb-4">
-        <div>
+<div>
           <h3 className="font-semibold text-gray-900 mb-1">{title}</h3>
           <p className="text-sm text-gray-500">
-            {unit}{current.toLocaleString()} of {unit}{target.toLocaleString()}
+            {unit}{safeCurrent.toLocaleString()} of {unit}{safeTarget.toLocaleString()}
           </p>
         </div>
         {icon && (
@@ -55,14 +58,14 @@ const ProgressCard = ({
       <div className="space-y-3">
         <div className="flex items-center justify-between text-sm">
           <span className="text-gray-600">{Math.round(percentage)}% complete</span>
-          <span className={`font-medium text-${color}`}>
-            {unit}{(target - current).toLocaleString()} to go
+<span className={`font-medium text-${color}`}>
+            {unit}{(safeTarget - safeCurrent).toLocaleString()} to go
           </span>
         </div>
         
         <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
           <motion.div
-            className={colorClasses[color].split(' ')[0]}
+            className={(colorClasses[color] || colorClasses.primary).split(' ')[0]}
             initial={{ width: 0 }}
             animate={{ width: `${percentage}%` }}
             transition={{ duration: 0.8, ease: "easeOut" }}
