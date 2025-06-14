@@ -146,11 +146,13 @@ if (accounts.length === 0) {
         </Button>
       </motion.div>
     )
-  }
+}
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
+      className="space-y-6"
     >
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
@@ -162,7 +164,8 @@ if (accounts.length === 0) {
           Connect Account
         </Button>
       </div>
-{/* Account Cards Grid */}
+
+      {/* Account Cards Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-6">
         {accounts.map((account, index) => (
           <motion.div
@@ -198,9 +201,15 @@ if (accounts.length === 0) {
                 <div className="space-y-2">
                   <p className="text-2xl font-bold text-gray-900">
                     {formatCurrency(account.balance)}
-                  </p>
+</p>
                   <p className="text-sm text-gray-500">
-                    Last sync: {format(new Date(account.lastSync), 'MMM dd, h:mm a')}
+                    Last sync: {(() => {
+                      try {
+                        return format(new Date(account.lastSync), 'MMM dd, h:mm a')
+                      } catch (error) {
+                        return 'Invalid date'
+                      }
+                    })()}
                   </p>
                 </div>
               </div>
@@ -243,9 +252,15 @@ if (accounts.length === 0) {
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-900">{transaction.merchant}</h4>
-                      <div className="flex items-center space-x-2">
+<div className="flex items-center space-x-2">
                         <p className="text-sm text-gray-500">
-                          {format(new Date(transaction.date), 'MMM dd, yyyy')}
+                          {(() => {
+                            try {
+                              return format(new Date(transaction.date), 'MMM dd, yyyy')
+                            } catch (error) {
+                              return 'Invalid date'
+                            }
+                          })()}
                         </p>
                         <Badge variant="default" size="sm">{transaction.category}</Badge>
                       </div>
