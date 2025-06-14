@@ -10,28 +10,26 @@ const Dashboard = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
-      className="space-y-8 max-w-full overflow-hidden"
+      className="space-y-6 lg:space-y-8 max-w-full overflow-hidden"
     >
-      <div>
-        <h1 className="text-2xl font-heading font-bold text-gray-900 mb-2">Dashboard</h1>
+      <div className="space-y-1">
+        <h1 className="text-2xl font-heading font-bold text-gray-900">Dashboard</h1>
         <p className="text-gray-600">Welcome back! Here's your financial overview.</p>
       </div>
 
       {/* Financial Stats */}
       <DashboardStats />
-
-      {/* Main Content Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+{/* Main Content Grid */}
+      <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 lg:gap-8">
         {/* Left Column - Transactions & Budget */}
-        <div className="lg:col-span-2 space-y-8">
+        <div className="xl:col-span-2 space-y-6 lg:space-y-8">
           <RecentTransactions />
           <BudgetOverview />
         </div>
-
-        {/* Right Column - Goals & Alerts */}
-        <div className="space-y-8">
+{/* Right Column - Goals & Alerts */}
+        <div className="space-y-6 lg:space-y-8">
           <GoalProgress />
           <AlertCenter />
         </div>

@@ -150,13 +150,13 @@ const Accounts = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="space-y-6 max-w-full overflow-hidden"
+      className="space-y-4 lg:space-y-6 max-w-full overflow-hidden"
     >
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-heading font-bold text-gray-900 mb-2">Accounts</h1>
+          <h1 className="text-2xl font-heading font-bold text-gray-900 mb-1">Accounts</h1>
           <p className="text-gray-600">Manage your connected financial accounts</p>
         </div>
         <Button>
@@ -164,9 +164,8 @@ const Accounts = () => {
           Connect Account
         </Button>
       </div>
-
-      {/* Account Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+{/* Account Cards Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-6">
         {accounts.map((account, index) => (
           <motion.div
             key={account.id}
@@ -229,9 +228,9 @@ const Accounts = () => {
             <div className="text-center py-8">
               <ApperIcon name="Receipt" size={48} className="text-gray-300 mx-auto mb-4" />
               <p className="text-gray-500">No transactions found for this account</p>
-            </div>
+</div>
           ) : (
-            <div className="space-y-3 max-h-96 overflow-y-auto">
+            <div className="space-y-3 max-h-80 overflow-y-auto">
               {transactions.map((transaction, index) => (
                 <motion.div
                   key={transaction.id}

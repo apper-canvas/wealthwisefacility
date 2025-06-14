@@ -156,13 +156,13 @@ const Budget = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="space-y-6 max-w-full overflow-hidden"
+      className="space-y-4 lg:space-y-6 max-w-full overflow-hidden"
     >
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-heading font-bold text-gray-900 mb-2">Budget</h1>
+          <h1 className="text-2xl font-heading font-bold text-gray-900 mb-1">Budget</h1>
           <p className="text-gray-600">Track and manage your spending by category</p>
         </div>
         <Button onClick={() => setShowAddBudget(true)}>
@@ -170,9 +170,8 @@ const Budget = () => {
           Add Category
         </Button>
       </div>
-
-      {/* Budget Summary */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+{/* Budget Summary */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
         <Card>
           <div className="flex items-center justify-between">
             <div>
@@ -235,26 +234,26 @@ const Budget = () => {
               Create Budget Category
             </Button>
           </div>
-        </Card>
+</Card>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
           {budgets.map((budget, index) => (
             <BudgetCategory 
               key={budget.category} 
-              budget={budget} 
+              budget={budget}
               index={index}
             />
           ))}
         </div>
       )}
 
-      {/* Add Budget Modal */}
+{/* Add Budget Modal */}
       {showAddBudget && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="bg-white rounded-lg shadow-xl max-w-md w-full p-6"
+            className="bg-white rounded-lg shadow-xl max-w-md w-full mx-4 p-6"
           >
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold text-gray-900">Add Budget Category</h3>

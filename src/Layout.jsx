@@ -9,12 +9,12 @@ const Layout = () => {
   const location = useLocation()
 
   return (
-    <div className="h-screen flex flex-col overflow-hidden bg-background">
+<div className="h-screen flex flex-col overflow-hidden bg-background">
       {/* Header */}
-      <header className="flex-shrink-0 h-16 bg-white border-b border-gray-200 px-4 lg:px-6 z-40">
-        <div className="flex items-center justify-between h-full">
+      <header className="flex-shrink-0 h-20 bg-white border-b border-gray-200 px-3 sm:px-4 lg:px-6 xl:px-8 z-40">
+        <div className="flex items-center justify-between h-full max-w-full">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-2 sm:space-x-3">
             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
               <ApperIcon name="DollarSign" size={20} className="text-white" />
             </div>
@@ -83,9 +83,9 @@ const Layout = () => {
                     className="p-2 rounded-lg hover:bg-gray-100"
                   >
                     <ApperIcon name="X" size={20} />
-                  </button>
+</button>
                 </div>
-                <nav className="space-y-2">
+                <nav className="space-y-1">
                   {routeArray.map(route => (
                     <NavLink
                       key={route.id}
@@ -109,18 +109,18 @@ const Layout = () => {
           </motion.div>
         )}
 
-        {/* Main Content */}
+{/* Main Content */}
         <main className="flex-1 overflow-y-auto bg-background">
-          <div className="p-4 lg:p-6">
+          <div className="p-3 sm:p-4 lg:p-6 xl:p-8 max-w-full">
             <Outlet />
           </div>
         </main>
       </div>
 
       {/* Mobile Bottom Navigation */}
-      <div className="lg:hidden bg-white border-t border-gray-200 z-40">
+<div className="lg:hidden bg-white border-t border-gray-200 z-40">
         <nav className="flex">
-          {routeArray.slice(0, 5).map(route => (
+          {routeArray.slice(0, 4).map(route => (
             <NavLink
               key={route.id}
               to={route.path}
