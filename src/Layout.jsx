@@ -8,10 +8,10 @@ const Layout = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const location = useLocation()
 
-return (
-<div className="min-h-screen flex flex-col bg-background">
+  return (
+    <div className="min-h-screen flex flex-col bg-background">
       {/* Header */}
-<header className="flex-shrink-0 h-16 sm:h-20 bg-white border-b border-gray-200 px-4 sm:px-4 lg:px-6 xl:px-8 z-40">
+      <header className="flex-shrink-0 h-16 sm:h-20 bg-white border-b border-gray-200 px-4 sm:px-4 lg:px-6 xl:px-8 z-40">
         <div className="flex items-center justify-between h-full max-w-full">
           {/* Logo */}
           <div className="flex items-center space-x-2 sm:space-x-3">
@@ -55,7 +55,7 @@ return (
           </nav>
         </aside>
 
-{/* Mobile Navigation */}
+        {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -112,16 +112,16 @@ return (
             </motion.div>
           </motion.div>
         )}
-)}
 
-{/* Main Content */}
+        {/* Main Content */}
         <main className="flex-1 bg-background">
           <div className="p-4 sm:p-6 lg:p-6 xl:p-8 max-w-full">
             <Outlet />
           </div>
-        </div>
+        </main>
+      </div>
 
-{/* Mobile Bottom Navigation */}
+      {/* Mobile Bottom Navigation */}
       <div className="lg:hidden bg-white border-t border-gray-200 z-40 safe-area-inset-bottom">
         <nav className="flex">
           {routeArray.slice(0, 4).map(route => (
