@@ -8,8 +8,8 @@ const Layout = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const location = useLocation()
 
-  return (
-<div className="h-screen flex flex-col overflow-hidden bg-background">
+return (
+<div className="min-h-screen flex flex-col bg-background">
       {/* Header */}
       <header className="flex-shrink-0 h-20 bg-white border-b border-gray-200 px-3 sm:px-4 lg:px-6 xl:px-8 z-40">
         <div className="flex items-center justify-between h-full max-w-full">
@@ -29,9 +29,9 @@ const Layout = () => {
             <ApperIcon name={isMobileMenuOpen ? "X" : "Menu"} size={20} />
           </button>
         </div>
-      </header>
+</header>
 
-      <div className="flex-1 flex overflow-hidden">
+      <div className="flex-1 flex">
         {/* Desktop Sidebar */}
         <aside className="hidden lg:flex w-64 bg-surface border-r border-gray-200 flex-col z-40">
           <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
@@ -108,13 +108,13 @@ const Layout = () => {
             </motion.div>
           </motion.div>
         )}
+)}
 
 {/* Main Content */}
-        <main className="flex-1 overflow-y-auto bg-background">
+        <main className="flex-1 bg-background">
           <div className="p-3 sm:p-4 lg:p-6 xl:p-8 max-w-full">
             <Outlet />
           </div>
-        </main>
       </div>
 
       {/* Mobile Bottom Navigation */}
