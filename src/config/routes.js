@@ -4,7 +4,7 @@ import Budget from '@/components/pages/Budget';
 import Investments from '@/components/pages/Investments';
 import Goals from '@/components/pages/Goals';
 import Insights from '@/components/pages/Insights';
-
+import Transactions from '@/components/pages/Transactions';
 export const routes = {
   dashboard: {
     id: 'dashboard',
@@ -48,12 +48,12 @@ insights: {
     icon: 'Lightbulb',
     component: Insights
   },
-  transactions: {
+transactions: {
     id: 'transactions',
     label: 'Transactions',
     path: '/transactions',
     icon: 'Receipt',
-    component: null // Component needs to be created
+    component: Transactions
   }
 };
 
