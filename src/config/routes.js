@@ -57,5 +57,6 @@ insights: {
   }
 };
 
-export const routeArray = Object.values(routes);
+// Filter out routes with null components to prevent rendering errors
+export const routeArray = Object.values(routes).filter(route => route.component !== null);
 export default routes;

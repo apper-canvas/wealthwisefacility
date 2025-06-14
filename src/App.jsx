@@ -9,12 +9,14 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          {routeArray.map(route => (
-            <Route 
-              key={route.id}
-              path={route.path}
-              element={<route.component />}
-            />
+{routeArray.map(route => (
+            route.component && (
+              <Route 
+                key={route.id}
+                path={route.path}
+                element={<route.component />}
+              />
+            )
           ))}
         </Route>
       </Routes>
