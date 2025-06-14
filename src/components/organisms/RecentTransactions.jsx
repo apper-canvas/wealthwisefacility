@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
 import Card from '@/components/atoms/Card'
 import Button from '@/components/atoms/Button'
 import TransactionItem from '@/components/molecules/TransactionItem'
@@ -8,9 +9,14 @@ import { transactionService } from '@/services'
 import { toast } from 'react-toastify'
 
 const RecentTransactions = () => {
+  const navigate = useNavigate()
   const [transactions, setTransactions] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+
+  const handleViewAll = () => {
+    navigate('/transactions')
+  }
 
   useEffect(() => {
     const loadTransactions = async () => {
@@ -84,10 +90,10 @@ const RecentTransactions = () => {
   }
 
   return (
-    <Card>
+<Card>
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-lg font-semibold text-gray-900">Recent Transactions</h2>
-        <Button variant="outline" size="sm">
+        <Button variant="outline" size="sm" onClick={handleViewAll}>
           <ApperIcon name="ArrowRight" size={16} className="ml-2" />
           View All
         </Button>

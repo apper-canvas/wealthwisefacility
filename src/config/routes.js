@@ -41,12 +41,19 @@ export const routes = {
     icon: 'Target',
     component: Goals
   },
-  insights: {
+insights: {
     id: 'insights',
     label: 'Insights',
     path: '/insights',
     icon: 'Lightbulb',
     component: Insights
+  },
+  transactions: {
+    id: 'transactions',
+    label: 'Transactions',
+    path: '/transactions',
+    icon: 'Receipt',
+    component: null // Component needs to be created
   }
 };
 
