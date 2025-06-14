@@ -130,7 +130,7 @@ const Accounts = () => {
     )
   }
 
-  if (accounts.length === 0) {
+if (accounts.length === 0) {
     return (
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -147,12 +147,10 @@ const Accounts = () => {
       </motion.div>
     )
   }
-
-return (
+  return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="space-y-4 lg:space-y-6 max-w-full overflow-hidden"
     >
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
